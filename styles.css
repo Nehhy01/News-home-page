@@ -1,4 +1,5 @@
 .attribution {
+  margin-top: 84px;
   font-size: 11px;
   text-align: center;
 }
@@ -6,3 +7,192 @@
   color: hsl(228, 45%, 44%);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  grid-template-areas: " header header" "main new" "extra_news extra_news";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  justify-content: space-between;
+}
+
+.header > img {
+  width: auto;
+  height: 45px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: hsl(236, 13%, 42%);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease-in 1ms;
+  list-style: none;
+}
+
+.nav-bar li:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.main-img {
+  width: 100%;
+  height: 300px;
+  background: yellow;
+  background-image: url(./assets/images/image-web-3-desktop.jpg);
+  /* background-position: top; */
+  object-fit: cover;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.5rem;
+}
+.main-headline {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-headline h1 {
+  font-weight: 800;
+  font-size: 3.7rem;
+  line-height: 1;
+}
+
+.main-headline p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5;
+}
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-text > button {
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  letter-spacing: 0.2rem;
+  padding: 1rem 2rem;
+  width: max-content;
+  font-weight: 700;
+  font: inherit;
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+}
+
+.main-text > button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.new-updates {
+  background-color: hsl(240, 100%, 5%);
+  grid-area: new;
+  color: hsl(36, 100%, 99%);
+  padding: 1.5rem;
+}
+
+.new-updates h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2.5rem;
+}
+
+.new-updates h4 {
+  font-size: 18px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.new-updates h4:hover {
+color: hsl(35, 77%, 62%);
+}
+
+.new-updates p {
+  color: hsl(233, 8%, 79%);
+  line-height: 1.5;
+}
+
+.new-updates div {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.new-updates div:last-child {
+  border-bottom: none;
+}
+
+.extra_news {
+  grid-area: extra_news;
+  display: grid;
+  margin: 1rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.extra-new-tile {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  grid-template-columns: 100px 1fr;
+  /* grid-template-columns: 1fr 2fr; */
+}
+
+.extra-new-tile > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.extra-new-tile img {
+  width: 100%;
+  height: 130px;
+}
+
+.extra-new-tile span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(233, 8%, 79%);
+}
+
+.extra-new-tile h3 {
+    margin: 0.8rem 0;
+    cursor: pointer;
+}
+
+.extra-new-tile h3:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.extra-new-tile p {
+   color: hsl(236, 13%, 42%);
+   line-height: 1.5;
+}
